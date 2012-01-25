@@ -1,4 +1,6 @@
 Legion::Application.routes.draw do
+  resources :data
+
   resources :sites
 
   # The priority is based upon order of creation:
