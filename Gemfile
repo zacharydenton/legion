@@ -22,7 +22,10 @@ end
 
 gem 'jquery-rails'
 gem 'therubyracer'
+gem 'mechanize'
 gem 'nokogiri'
+gem 'delayed_job_active_record'
+gem 'daemons'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

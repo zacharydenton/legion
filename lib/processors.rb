@@ -7,8 +7,14 @@ end
 
 class Processors
   def self.add_links(site)
-    site.content.links.each do |url|
-      Site.create(:url => url)
+    site.page.links.each do |link|
+      url = link.href
+      if url
+        if not url.starts_with? 'http:'
+          url = absolute_url(site.url, url)
+        end
+        Site.create(:url => url)
+      end
     end
   end
 
